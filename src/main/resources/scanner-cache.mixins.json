@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.alonie.cache.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"NbtPredicateCacheMixin",
+		"EntityPredicateCacheMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
