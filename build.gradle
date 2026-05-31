@@ -3,8 +3,12 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+version = ''
 group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
 
 repositories {
 }
@@ -25,9 +29,9 @@ dependencies {
 }
 
 processResources {
-	inputs.property "version", project.version
+	inputs.property "version", project.mod_version
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand "version": project.mod_version
 	}
 }
 
